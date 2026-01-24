@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+
+        body {
+            margin: 0;
+            font-family: 'Rubik', sans-serif;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            position: fixed;
+            width: 250px;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            background: #111;
+            padding-top: 50px;
+            color: #fff;
+            padding-left: 20px;
+        }
+
+        .sidebar h2 {
+            display: block;
+            padding: 10px 20px;
+            color: #fff;
+            text-decoration: none;
+            letter-spacing: 2px;
+            font-weight: 400;
+            margin: 0;
+            font-size: 25px;
+            text-transform: uppercase;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 10px 20px;
+            color: #bbb;
+            text-decoration: none;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            color: #fff;
+            margin-left: 20px;
+            transition: all 0.3s ease;
+        }
+
+        /* View Section Styles */
+        .view {
+            margin-left: 0px;
+            padding: 5px 5px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        h1 {
+            width: 100%;
+            text-align: center;
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        /* Slider Styles */
+        .slider-container {
+            position: relative;
+            width: 90vw;
+            overflow: hidden;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .slider {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 immagini per fila */
+            grid-gap: 15px;
+            grid-template-rows: auto;
+            transition: transform 0.5s ease;
+            width: 100%;
+            height: max-content;
+        }
+
+        .slide {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            opacity: 0.6; /* Le immagini sono invisibili all'inizio */
+            transition: opacity 0.5s ease;
+        }
+
+        /* Animazione per la comparsa delle immagini */
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Animazione hover per ingrandire l'immagine */
+        .slide:hover {
+            opacity: 1;
+            transform: scale(1.05);
+            transition: transform 0.5s ease;
+        }

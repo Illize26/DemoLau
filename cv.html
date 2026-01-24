@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cg-menu-root-food</title>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Rubik', sans-serif;
+            background: #fafafa;
+            color: #222;
+        }
+
+        /* ================= LAYOUT ================= */
+        .layout {
+            display: flex;
+        }
+
+        /* ================= SIDEBAR ================= */
+        .sidebar {
+            position: fixed;
+            width: 250px;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            background: #111;
+            padding-top: 50px;
+            padding-left: 20px;
+            color: #fff;
+            z-index: 10000;
+            transition: transform 0.3s ease;
+        }
+
+        .sidebar h2 {
+            padding: 10px 20px;
+            font-size: 24px;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 10px 20px;
+            color: #bbb;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: #fff;
+            margin-left: 15px;
+        }
+
+        /* ================= HAMBURGER ================= */
+        .menu-toggle {
+            display: none;
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            z-index: 10001;
+            background: #111;
+            color: #fff;
+            border: none;
+            font-size: 26px;
+            padding: 10px 14px;
+            cursor: pointer;
+        }
+
+        /* ================= CONTENT ================= */
+        .cv {
+            margin-left: 250px;
+            padding: 40px 20px;
+            max-width: 900px;
+            line-height: 1.7;
+        }
+
+        .block {
+            margin-bottom: 35px;
+        }
+
+        .block h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .block p,
+        .block li {
+            font-size: 17px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        /* ================= MOBILE ================= */
+        @media (max-width: 768px) {
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .sidebar {
+                transform: translateX(-100%);
+            }
+
+            .sidebar.active {
+                transform: translateX(0);
+            }
+
+            .cv {
+                margin-left: 0;
+                padding-top: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<button class="menu-toggle">☰</button>
+
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h2>Site Demo</h2>
+        <a href="./slider2.html">Home</a>
+        <a href="#">About</a>
+        <a href="#">Portfolio</a>
+        <a href="#">Service</a>
+        <a href="#">Join</a>
+        <a href="#">Contact</a>
+    </aside>
+
+    <!-- CONTENT -->
+    <main class="cv">
+
+        <div class="block">
+            <h3>Profile</h3>
+            <p>
+                Professional photographer specialized in portrait, lifestyle
+                and editorial photography. Passionate about capturing emotions,
+                light and authentic moments through a clean and contemporary style.
+            </p>
+        </div>
+
+        <div class="block">
+            <h3>Skills</h3>
+            <ul>
+                <li>Portrait, lifestyle & editorial photography</li>
+                <li>Natural & studio lighting</li>
+                <li>Photo editing & color correction (Lightroom, Photoshop)</li>
+                <li>Visual storytelling</li>
+                <li>Client direction & creative planning</li>
+            </ul>
+        </div>
+
+        <div class="block">
+            <h3>Experience</h3>
+            <p>
+                <strong>Freelance Photographer</strong><br>
+                Creation of visual content for personal brands, events,
+                portraits and creative projects. Collaboration with
+                artists, small businesses and digital platforms.
+            </p>
+        </div>
+
+        <div class="block">
+            <h3>Education</h3>
+            <p>
+                Self-taught photographer with continuous research,
+                practice and personal projects focused on
+                composition, light and visual identity.
+            </p>
+        </div>
+
+    </main>
+
+</div>
+
+<script>
+    /* MENU TOGGLE */
+    const toggle = document.querySelector('.menu-toggle');
+    const sidebar = document.querySelector('.sidebar');
+
+    toggle.addEventListener('click', () => {
+        sidebar.classList.toggle('active');
+    });
+</script>
+
+</body>
+</html>
