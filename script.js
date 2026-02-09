@@ -178,6 +178,18 @@ if (typeof gsap !== 'undefined') {
         });
     }
 
+    // CV Image page - Animate fullscreen image
+    const cvFullscreenImage = document.querySelector('.cv-fullscreen-image');
+    if (cvFullscreenImage) {
+        gsap.to('.cv-fullscreen-image', {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            ease: 'power2.out',
+            delay: 0.3
+        });
+    }
+
     // Works page - Animate header
     const worksHeader = document.querySelector('.works-header');
     if (worksHeader) {
