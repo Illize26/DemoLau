@@ -3,10 +3,93 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>cg-menu-root-food</title>
+    <meta name="description" content="Professional photographer portfolio and CV" />
+    <title>CV - Professional Photographer Portfolio</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css" />
 
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+
+<button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" role="navigation" aria-label="Main navigation">
+        <div class="sidebar-header">
+            <h2>Site Demo</h2>
+        </div>
+        <nav>
+            <ul class="sidebar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="works.html">Works</a></li>
+                <li><a href="cv.html" class="active" aria-current="page">Portfolio</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- CONTENT -->
+    <main class="cv-content" role="main">
+
+        <header class="cv-header">
+            <h1>Curriculum Vitae</h1>
+            <p class="subtitle">Professional Photographer</p>
+        </header>
+
+        <section class="cv-block">
+            <h3>Profile</h3>
+            <p>
+                Professional photographer specialized in portrait, lifestyle
+                and editorial photography. Passionate about capturing emotions,
+                light and authentic moments through a clean and contemporary style.
+            </p>
+        </section>
+
+        <section class="cv-block">
+            <h3>Skills</h3>
+            <ul>
+                <li>Portrait, lifestyle & editorial photography</li>
+                <li>Natural & studio lighting</li>
+                <li>Photo editing & color correction (Lightroom, Photoshop)</li>
+                <li>Visual storytelling</li>
+                <li>Client direction & creative planning</li>
+            </ul>
+        </section>
+
+        <section class="cv-block">
+            <h3>Experience</h3>
+            <p>
+                <strong>Freelance Photographer</strong><br>
+                Creation of visual content for personal brands, events,
+                portraits and creative projects. Collaboration with
+                artists, small businesses and digital platforms.
+            </p>
+        </section>
+
+        <section class="cv-block">
+            <h3>Education</h3>
+            <p>
+                Self-taught photographer with continuous research,
+                practice and personal projects focused on
+                composition, light and visual identity.
+            </p>
+        </section>
+
+    </main>
+
+</div>
+
+<!-- External JavaScript -->
+<script src="script.js"></script>
+
+</body>
+</html>
 
     <style>
         @import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
@@ -133,14 +216,19 @@
 <div class="layout">
 
     <!-- SIDEBAR -->
-    <aside class="sidebar">
-        <h2>Site Demo</h2>
-        <a href="index.html">Home</a>
-        <a href="#">Portfolio</a>
-        <!--<a href="#">About</a> -->
-        <!--<a href="#">Service</a> -->
-        <!--<a href="#">Join</a> -->
-        <!--<a href="#">Contact</a> -->
+    <aside class="sidebar" role="navigation" aria-label="Main navigation">
+        <div class="sidebar-header">
+            <h2>Site Demo</h2>
+        </div>
+        <nav>
+            <ul class="sidebar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="works.html">Works</a></li>
+                <li><a href="cv.html" class="active" aria-current="page">Portfolio</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
     </aside>
 
     <!-- CONTENT -->

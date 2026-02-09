@@ -3,10 +3,80 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>cg-menu-root-food</title>
+    <meta name="description" content="Professional photographer portfolio - Browse our collection of photography work" />
+    <title>Homepage - Photography Portfolio</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css" />
 
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+
+<button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+
+<div class="layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar" role="navigation" aria-label="Main navigation">
+        <div class="sidebar-header">
+            <h2>Site Demo</h2>
+        </div>
+        <nav>
+            <ul class="sidebar-nav">
+                <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+                <li><a href="works.html">Works</a></li>
+                <li><a href="cv.html">Portfolio</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Content -->
+    <main class="content" role="main">
+        <h1>HOMEPAGE</h1>
+
+        <section class="view">
+            <div class="slider-container">
+                <div class="slider">
+                    <img src="./assets2/test1.jpg" class="slide" alt="Photography work 1">
+                    <img src="./assets2/test2.jpg" class="slide" alt="Photography work 2">
+                    <img src="./assets2/test3.jpg" class="slide" alt="Photography work 3">
+                    <img src="./assets2/test4.jpg" class="slide" alt="Photography work 4">
+                    <img src="./assets2/test5.jpg" class="slide" alt="Photography work 5">
+                    <img src="./assets2/test6.jpg" class="slide" alt="Photography work 6">
+                    <img src="./assets2/test7.jpg" class="slide" alt="Photography work 7">
+                    <img src="./assets2/test8.jpg" class="slide" alt="Photography work 8">
+                    <img src="./assets2/test9.jpg" class="slide" alt="Photography work 9">
+                    <img src="./assets2/test10.jpg" class="slide" alt="Photography work 10">
+                    <img src="./assets2/test11.jpg" class="slide" alt="Photography work 11">
+                    <img src="./assets2/test12.jpg" class="slide" alt="Photography work 12">
+                    <img src="./assets2/test13.jpg" class="slide" alt="Photography work 13">
+                    <img src="./assets2/test14.jpg" class="slide" alt="Photography work 14">
+                    <img src="./assets2/test15.jpg" class="slide" alt="Photography work 15">
+                    <img src="./assets2/test16.jpg" class="slide" alt="Photography work 16">
+                    <img src="./assets2/test17.jpg" class="slide" alt="Photography work 17">
+                    <img src="./assets2/test18.jpg" class="slide" alt="Photography work 18">
+                </div>
+            </div>
+        </section>
+    </main>
+
+</div>
+
+<!-- Image Modal for Zoom -->
+<div class="image-modal">
+    <span class="close-modal">&times;</span>
+    <img src="" alt="Zoomed image">
+</div>
+
+<!-- External JavaScript -->
+<script src="script.js"></script>
+
+</body>
+</html>
 
     <style>
         @import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
